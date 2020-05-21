@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body {
+    margin: 0;
+    /* font-family: Arial; */
+    /* font-family: 'Jua', sans-serif; */
+    background-color: #f2f2f2;
+  }
+  
+  .box {
+    font-family: 'Jua', sans-serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px gray;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    line-height: 100vh;
+    background-color: #efefef;
+  }
+  
+  .box1 {
+      background-color: #A2DED0;
+      background-image: url( "../assets/images/1.png" );
+      background-repeat: no-repeat; 
+      background-position: center center;
+      background-size: cover;
+    }
+  .box2 {
+      background-color: #F4D03F;
+      background-image: url( "../assets/images/2.png" );
+      background-repeat: no-repeat; 
+      background-position: center center;
+      background-size: cover;
+    }
+  .box3 {
+      background-color: #6C7A89;
+      background-image: url( "../assets/images/3.png" );
+      background-repeat: no-repeat; 
+      background-position: center center;
+      background-size: cover;
+    }
+  .box4 {
+      background-color: #59ABE3;
+      background-image: url( "../assets/images/4.png" );
+      background-repeat: no-repeat; 
+      background-position: center center;
+      background-size: cover;
+    }
+  
+  /* Our Grid Code */
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100vh;
+  }
+  
+  /* try to resize the screen */
+  @media screen and (max-width: 1024px) {
+    .home {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50vh 50vh;
+    }
+  }
