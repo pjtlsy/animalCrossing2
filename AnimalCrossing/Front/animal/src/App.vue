@@ -1,19 +1,19 @@
 <template>
   <v-app>
     <v-content>
-      <RightTab />
+      <!-- <RightTab /> -->
       <Board />
     </v-content>
   </v-app>
 </template>
 <script>
-import RightTab from "@/components/RightTab.vue";
-import Board from './views/Board.vue';
+// import RightTab from "@/components/RightTab.vue";
+import Board from "./views/Board.vue";
 
 export default {
   name: "App",
   components: {
-    RightTab,
+    // RightTab,
     Board
   }
 };

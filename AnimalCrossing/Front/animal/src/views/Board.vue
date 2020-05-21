@@ -1,37 +1,44 @@
 <template>
-  <div class="home">
+  <div>
     <div class="board">
       <h1 class="board__heading">
         동물의숲 게시판
       </h1>
       <nav class="board__nav">
-          <!-- ! the buttons added in the script, to include a background color for the specific category  -->
-          <!-- <button class="nav--item active" data-item="all">All</button>
-          <button class="nav--item" data-item="news">News</button>
-          <button class="nav--item" data-item="updates">Updates</button>
-          <button class="nav--item" data-item="maintenance">Maintenance</button>
-          <button class="nav--item" data-item="events">Events</button>
-          <button class="nav--item" data-item="important">Important</button> -->
+        <!-- ! the buttons added in the script, to include a background color for the specific category  -->
+        <!-- <button class="nav--item active" data-item="all">All</button>
+        <button class="nav--item" data-item="news">News</button>
+        <button class="nav--item" data-item="updates">Updates</button>
+        <button class="nav--item" data-item="maintenance">Maintenance</button>
+        <button class="nav--item" data-item="events">Events</button>
+        <button class="nav--item" data-item="important">Important</button> -->
       </nav>
       <section class="board__news">
-          <router-view />
-          <!-- ! news items added through the script according to 1. the latest date and 1. the selected category -->
-          <!--
-          <a class="news--item" href="#">
-              <p class="date">
-                  Apr 26, 2019
-              </p>
-              <p class="title">
-                  Lorem inpsum
-              </p>
-          </a> -->
+        <router-view />
+        <!-- ! news items added through the script according to 1. the latest date and 1. the selected category -->
+        <!--
+        <a class="news--item" href="#">
+            <p class="date">
+                Apr 26, 2019
+            </p>
+            <p class="title">
+                Lorem inpsum
+            </p>
+        </a> -->
       </section>
+      <div class="right_tab">
+        <RightTab />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import RightTab from "@/components/RightTab.vue";
 export default {
+  components: {
+    RightTab
+  }
 };
 </script>
 
@@ -41,6 +48,11 @@ export default {
   padding: 0;
   margin: 0;
 } */
+.right_tab {
+  position: absolute;
+  top: 30%;
+  right: 9%;
+}
 
 body {
   color: hsl(0, 0%, 0%);
@@ -50,6 +62,7 @@ body {
 /* include the board in the center of the viewport */
 .board {
   max-width: 1000px;
+  max-height: 2000px;
   width: 90vw;
   margin: 4rem auto;
   /* display grid without specifying any structure, at least beyond the media query
@@ -124,7 +137,8 @@ a background is specified in the script */
   width: 80%;
   justify-self: center;
   /* dictate a maximum height to allow for vertical scroll */
-  max-height: 300px;
+  max-height: 500px;
+  height: 400px;
   overflow-y: auto;
 }
 /* minor style changes for the scrollbar */
