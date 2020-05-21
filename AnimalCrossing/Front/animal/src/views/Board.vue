@@ -138,7 +138,7 @@ a background is specified in the script */
   justify-self: center;
   /* dictate a maximum height to allow for vertical scroll */
   max-height: 500px;
-  height: 400px;
+  height: 435px;
   overflow-y: auto;
 }
 /* minor style changes for the scrollbar */
