@@ -20,6 +20,10 @@ body {
         background-size: cover;
     }
 
+    .box1IconImg {
+        display: none;
+    }
+
     .box2 {
         display: grid;
         background-color: #F4D03F;
@@ -68,41 +72,63 @@ body {
 
 
 @media screen and (max-width: 1024px) {
-    .logo {
-        transform: scale(0.2);
-    }
-
     .box1 {
+        overflow: hidden;
         display: grid;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas:
-            "logoImg"
-            "box1Text";
-        background-color: rgba(162, 222, 208, 0.233);
+        background-color: rgba(168, 185, 196, 0.384);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+    }
+
+    .box1Con {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+            "box1IconImg"
+            "box1Text";
+    }
+
+    .box1IconImg {
+        float: left;
+        width: 40%;
+        margin: 0 auto ;
+        /* background-color: red; */
+        grid-area: box1IconImg;
+    }
+
+    .box1Text {
+        float: left;
+        width: 40%;
+        margin : 0 auto ;
+        grid-area: box1Text;
+    }
+
+    .box2Con {
+        background-color: rgba(58, 134, 184, 0.603);
     }
 
     .box2 {
         display: grid;
-        background-color: rgba(244, 208, 63, 0.24);
+        background-color: rgba(58, 134, 184, 0.452);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        /* border-radius: 0px 0px 50px 50px; */
     }
-
+    
     .box3 {
         display: grid;
-        background-color: rgba(108, 122, 137, 0.267);
+        background-color: rgba(58, 134, 184, 0.603);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        /* border-radius: 0px 0px 50px 50px; */
     }
 
     .box4 {
         display: grid;
-        background-color: rgba(89, 172, 227, 0.137);
+        background-color: rgba(89, 172, 227, 0);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
