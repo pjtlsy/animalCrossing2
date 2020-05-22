@@ -67,7 +67,6 @@ body {
         line-height: 90vh;
         background-color: #efefef;
     }
-
 }
 
 
@@ -90,10 +89,9 @@ body {
     }
 
     .box1IconImg {
-        float: left;
-        width: 40%;
+        width: auto; 
+        height: 85%;
         margin: 0 auto ;
-        /* background-color: red; */
         grid-area: box1IconImg;
     }
 
