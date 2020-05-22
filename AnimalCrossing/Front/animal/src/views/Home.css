@@ -2,63 +2,133 @@
 
 body {
     margin: 0;
-    /* font-family: Arial; */
-    /* font-family: 'Jua', sans-serif; */
     background-color: #f2f2f2;
-  }
-  
-  .box {
-    font-family: 'Jua', sans-serif;
-    font-size: 2rem;
-    text-shadow: 2px 2px 2px gray;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-    line-height: 100vh;
-    background-color: #efefef;
-  }
-  
-  .box1 {
-      background-color: #A2DED0;
-      background-image: url( "../assets/images/1.png" );
-      background-repeat: no-repeat; 
-      background-position: center center;
-      background-size: cover;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .logo {
+        display: none;
     }
-  .box2 {
-      background-color: #F4D03F;
-      background-image: url( "../assets/images/2.png" );
-      background-repeat: no-repeat; 
-      background-position: center center;
-      background-size: cover;
+
+    .box1 {
+        display: grid;
+        background-color: #A2DED0;
+        background-image: url("../assets/images/1.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
     }
-  .box3 {
-      background-color: #6C7A89;
-      background-image: url( "../assets/images/3.png" );
-      background-repeat: no-repeat; 
-      background-position: center center;
-      background-size: cover;
+
+    .box2 {
+        display: grid;
+        background-color: #F4D03F;
+        background-image: url("../assets/images/2.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
     }
-  .box4 {
-      background-color: #59ABE3;
-      background-image: url( "../assets/images/4.png" );
-      background-repeat: no-repeat; 
-      background-position: center center;
-      background-size: cover;
+
+    .box3 {
+        display: grid;
+        background-color: #6C7A89;
+        background-image: url("../assets/images/3.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
     }
-  
-  /* Our Grid Code */
-  .home {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100vh;
-  }
-  
-  /* try to resize the screen */
-  @media screen and (max-width: 1024px) {
+
+    .box4 {
+        display: grid;
+        background-color: #59ABE3;
+        background-image: url("../assets/images/4.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
     .home {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 50vh 50vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100vh;
     }
-  }
+
+    .box {
+        font-family: 'Jua', sans-serif;
+        font-size: 2rem;
+        text-shadow: 2px 2px 2px gray;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        line-height: 90vh;
+        background-color: #efefef;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        transform: scale(0.2);
+    }
+
+    .box1 {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+            "logoImg"
+            "box1Text";
+        background-color: rgba(162, 222, 208, 0.233);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .box2 {
+        display: grid;
+        background-color: rgba(244, 208, 63, 0.24);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .box3 {
+        display: grid;
+        background-color: rgba(108, 122, 137, 0.267);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .box4 {
+        display: grid;
+        background-color: rgba(89, 172, 227, 0.137);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .box {
+        font-family: 'Jua', sans-serif;
+        font-size: 2rem;
+        text-shadow: 2px 2px 2px gray;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .home {
+        background-image: url("../assets/images/sea.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40vh 20vh 20vh 20vh;
+        grid-template-areas:
+            "box1"
+            "box2"
+            "box3"
+            "box4";
+    }
+}
